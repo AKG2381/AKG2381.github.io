@@ -5,6 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ajeet Kumar Gupta — Data Engineer & GenAI Builder</title>
 <meta name="description" content="Ajeet Kumar Gupta — Data Engineer building scalable pipelines and LLM-powered data tools. RAG, text-to-SQL, FastAPI, PySpark, GCP.">
+
+<!-- favicon -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<!-- canonical (update this if you move to a custom domain) -->
+<link rel="canonical" href="https://akg2381.github.io/">
+
+<!-- Open Graph / social preview -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://akg2381.github.io/">
+<meta property="og:title" content="Ajeet Kumar Gupta — Data Engineer & GenAI Builder">
+<meta property="og:description" content="Scalable data pipelines & LLM-powered tools. RAG, text-to-SQL, FastAPI, PySpark, GCP.">
+<meta property="og:image" content="https://akg2381.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ajeet Kumar Gupta — Data Engineer & GenAI Builder">
+<meta name="twitter:description" content="Scalable data pipelines & LLM-powered tools. RAG, text-to-SQL, FastAPI, PySpark, GCP.">
+<meta name="twitter:image" content="https://akg2381.github.io/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -111,6 +132,19 @@
   .now-tags{display:flex;flex-wrap:wrap;gap:9px;position:relative}
   .now-tags span{font-family:var(--mono);font-size:12px;color:var(--text);background:rgba(255,255,255,.04);border:1px solid var(--line-strong);padding:7px 13px;border-radius:8px}
   .edit-note{font-family:var(--mono);font-size:11px;color:var(--muted-2);margin-top:16px;position:relative}
+  .modules{display:flex;flex-direction:column;position:relative;margin-top:4px}
+  .module{display:flex;align-items:flex-start;gap:14px;padding:13px 0;border-bottom:1px solid var(--line)}
+  .module:last-child{border-bottom:none}
+  .module .ic{flex-shrink:0;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:10px;font-family:var(--mono);margin-top:2px}
+  .module.done .ic{background:rgba(86,212,198,.15);color:var(--cyan);border:1px solid rgba(86,212,198,.45)}
+  .module.active .ic{background:rgba(167,139,255,.2);color:var(--violet);border:1px solid var(--violet);animation:pulse-v 2s infinite}
+  .module.next .ic{background:transparent;color:var(--muted-2);border:1px solid var(--line-strong)}
+  .module .mtitle{font-size:.98rem;color:var(--text);font-weight:500;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .module.next .mtitle{color:var(--muted)}
+  .module .mdate{font-family:var(--mono);font-size:11.5px;color:var(--muted-2);margin-top:3px}
+  .module .badge{font-family:var(--mono);font-size:10px;padding:3px 8px;border-radius:5px;text-transform:uppercase;letter-spacing:.5px}
+  .module .badge.now{background:rgba(167,139,255,.16);color:var(--violet)}
+  .module .badge.opt{background:rgba(255,255,255,.04);color:var(--muted-2);border:1px solid var(--line)}
 
   /* pipeline experience */
   .pipeline{position:relative;padding-left:38px}
@@ -221,6 +255,7 @@
     </div>
     <div class="cta fade d5">
       <a class="btn btn-primary" href="#projects">See my work ↓</a>
+      <a class="btn btn-ghost" href="Ajeet_Kumar_Gupta_Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
       <a class="btn btn-ghost" href="https://github.com/AKG2381" target="_blank" rel="noopener">GitHub</a>
       <a class="btn btn-ghost" href="https://www.linkedin.com/in/ajeet-kumar-gupta-544619175/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
@@ -239,7 +274,7 @@
         <p class="soft">Lately I've been obsessed with the intersection of <span class="hl">data and large language models</span> — building tools like RAG systems and text-to-SQL engines that let non-technical people just <em>ask</em> their data questions in plain English. That's the work I want to do more of.</p>
       </div>
       <div class="about-side">
-        <div class="stat-card"><div class="big">2+ yrs</div><div class="lbl">building production data systems</div></div>
+        <div class="stat-card"><div class="big">3+ yrs</div><div class="lbl">building production data systems</div></div>
         <div class="stat-card"><div class="big">7→3 days</div><div class="lbl">pipeline turnaround cut at Provakil</div></div>
         <div class="stat-card"><div class="big">8,000+</div><div class="lbl">data sources monitored</div></div>
       </div>
@@ -253,18 +288,17 @@
       <span class="sec-num">02 /</span><h2 class="sec-title">Currently Building</h2><span class="sec-line"></span>
     </div>
     <div class="now-card">
-      <div class="now-badge"><span class="live"></span>IN PROGRESS · 2026</div>
-      <h3>Going deeper on GenAI engineering</h3>
-      <p>I'm actively leveling up on building <strong>production-grade LLM applications</strong> — moving beyond prototypes into retrieval pipelines, agentic workflows, and evaluation. I'm applying it directly: my RAG and text-to-SQL projects are where the theory meets real code.</p>
-      <div class="now-tags">
-        <span>Retrieval-Augmented Generation</span>
-        <span>LLM Agents &amp; Tool Use</span>
-        <span>LangChain</span>
-        <span>Vector Databases</span>
-        <span>Prompt Engineering</span>
-        <span>Evals &amp; Guardrails</span>
+      <div class="now-badge"><span class="live"></span>GENERATIVE AI PROGRAM · IN PROGRESS</div>
+      <h3>From prompts to production AI agents</h3>
+      <p>I'm working through a hands-on Generative AI program that runs the full arc — <strong>prompt engineering, RAG, multi-agent systems, and deployment</strong>. It maps directly onto what I'm shipping: my text-to-SQL and RAG projects are this curriculum turned into real, working code.</p>
+      <div class="modules">
+        <div class="module done"><div class="ic">✓</div><div><div class="mtitle">Prompt Engineering &amp; API Integration</div><div class="mdate">Nov 2025</div></div></div>
+        <div class="module done"><div class="ic">✓</div><div><div class="mtitle">NLP &amp; Retrieval-Augmented Generation (RAG)</div><div class="mdate">Dec 2025</div></div></div>
+        <div class="module done"><div class="ic">✓</div><div><div class="mtitle">AI Agents &amp; Multi-Agent Systems</div><div class="mdate">Feb 2026</div></div></div>
+        <div class="module active"><div class="ic">●</div><div><div class="mtitle">Deployment &amp; Project Integration <span class="badge now">Active now</span></div><div class="mdate">Mar 2026 — current focus</div></div></div>
+        <div class="module next"><div class="ic">○</div><div><div class="mtitle">Foundations of Neural Networks &amp; Transformers <span class="badge opt">Optional</span></div><div class="mdate">from May 2026</div></div></div>
+        <div class="module next"><div class="ic">○</div><div><div class="mtitle">Fine-Tuning LLMs <span class="badge opt">Optional</span></div><div class="mdate">from Jun 2026</div></div></div>
       </div>
-      <p class="edit-note">↳ Ajeet: replace this block with your actual course name + exact topics once you send them. The tags above are placeholders matching common GenAI curricula.</p>
     </div>
   </div>
 </section>
@@ -286,7 +320,9 @@
             <li>Designed a <strong>distributed processing system</strong> using RabbitMQ producer/consumer queues for async job execution</li>
             <li>Processed large datasets with <strong>PySpark</strong> and parallelized workflows via async + multithreading</li>
             <li>Optimized PostgreSQL queries (indexing, partitioning) to improve pipeline performance</li>
-            <li>Containerized services with <strong>Docker</strong>, deployed on GCP with reliability &amp; monitoring</li>
+            <li>Containerized services with <strong>Docker</strong> and built <strong>CI/CD pipelines on GCP</strong> for automated, reliable deployments with monitoring</li>
+            <li>Built multiple internal <strong>data tools</strong> and authored reusable workflows for generic, repetitive tasks — streamlining processes and cutting manual effort</li>
+            <li>Championed <strong>cleaner coding practices</strong> across the team through reviews and shared standards</li>
           </ul>
         </div>
       </div>
