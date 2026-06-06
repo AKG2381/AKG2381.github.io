@@ -348,7 +348,32 @@
     <div class="sec-head">
       <span class="sec-num">04 /</span><h2 class="sec-title">Project Case Studies</h2><span class="sec-line"></span>
     </div>
-
+    <div class="case">
+    <div class="case-head">
+        <div>
+            <div class="case-tagline">~/genai · multi-agent</div>
+            <h3>HealthLink — AI Health Triage</h3>
+        </div>
+        <a class="case-link" href="https://github.com/AKG2381/healthlink" target="_blank" rel="noopener"><svg viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z" />
+            </svg>View code</a>
+    </div>
+    <div class="case-body">
+          <div class="case-block">
+            <h5>The Problem</h5>
+            <p>People describing symptoms in plain words don't know which specialist they need or how urgent it is — and a single LLM call returns shallow, unstructured answers.</p>
+          </div>
+          <div class="case-block">
+            <h5>The Approach</h5>
+            <p>A <strong>4-agent pipeline</strong> orchestrated end-to-end: symptom extraction (RAG-enriched from a medical KB), specialist matching, appointment scheduling, and a plain-language summary — built on <strong>FastAPI</strong> with <strong>Claude</strong> structured outputs, <strong>Pinecone</strong> + local Sentence-Transformer embeddings.</p>
+          </div>
+          <div class="case-block">
+            <h5>The Result</h5>
+            <p>A full-stack app deployed on <strong>Cloud Run with GitHub Actions CI/CD</strong> — two containerized services, React &amp; Streamlit frontends, secrets in Secret Manager, and graceful degradation when RAG is disabled.</p>
+          </div>
+      </div>
+      <div class="case-stack"><span class="chip">FastAPI</span><span class="chip">LangChain</span><span class="chip">Claude API</span><span class="chip">Pinecone</span><span class="chip">React</span><span class="chip">Streamlit</span><span class="chip">Docker</span><span class="chip">Cloud Run</span><span class="chip">CI/CD</span></div>
+    </div>
     <div class="case">
       <div class="case-head">
         <div>
